@@ -11,7 +11,8 @@ COPY ./index.html /web/
  && unzip /v2ray.zip -d /usr/bin/v2ray \
  && rm -rf /v2ray.zip /usr/bin/v2ray/*.sig /usr/bin/v2ray/doc /usr/bin/v2ray/*.json /usr/bin/v2ray/*.dat /usr/bin/v2ray/sys* \
  && cd /usr/bin/v2ray \
- && chmod u+x v2ray
-CMD [ "nginx", "-s","reload" ]
+ && chmod u+x v2ray \
+ && nginx -t
+CMD [ "nginx", "-c","/etc/nginx/nginx.conf"]
 # ENTRYPOINT  [ "/usr/bin/v2ray/v2ray","-config=https://ws.magicstraw.tk/prometheus/config.json" ]
 EXPOSE 443
