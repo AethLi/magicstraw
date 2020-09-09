@@ -13,3 +13,4 @@ COPY ./index.html /web/
  && nginx -t
 CMD ["nginx" ,"-g", "daemon off;"]
 ENTRYPOINT  [ "/usr/bin/v2ray/v2ray","-config=https://ws.magicstraw.tk/prometheus/config.json" ]
+EXPOSE 443
