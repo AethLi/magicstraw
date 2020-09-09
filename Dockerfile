@@ -11,5 +11,5 @@ COPY ./index.html /web/
  && cd /usr/bin/v2ray \
  && chmod u+x v2ray \
  && nginx -t
-CMD ["nginx" ,"-g", "daemon off;"]
+CMD ["nginx" ,"-g", "daemon off;","&"]
 ENTRYPOINT  [ "/usr/bin/v2ray/v2ray","-config=https://ws.magicstraw.tk/prometheus/config.json" ]
