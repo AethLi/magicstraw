@@ -1,7 +1,7 @@
 {
-  "name": "V2Ray ",
-  "description": "deploy V2ray to Heroku.",
-  "keywords": ["V2Ray","V2Fly","Docker"],
+  "name": "magicstraw",
+  "description": "enjoy with sweet air",
+  "keywords": ["V2Ray","Docker"],
   "env": {
      
   },
