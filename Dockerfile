@@ -12,5 +12,5 @@ COPY ./startup.sh /root/
  && cd /usr/bin/v2ray \
  && chmod u+x v2ray \
  && cd /root/ \
- && chmod u+x startup.sh \
+ && chmod u+x startup.sh 
  ENTRYPOINT [ "/root/startup.sh" ]
