@@ -14,5 +14,4 @@ COPY ./startup.sh /root/
  && cd /root/ \
  && chmod u+x startup.sh \
  && nginx -t
- EXPOSE 443
  ENTRYPOINT [ "/root/startup.sh" ]
