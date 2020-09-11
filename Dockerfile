@@ -13,5 +13,4 @@ COPY ./startup.sh /root/
  && chmod u+x v2ray \
  && cd /root/ \
  && chmod u+x startup.sh \
- && nginx -t
  ENTRYPOINT [ "/root/startup.sh" ]
