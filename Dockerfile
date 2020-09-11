@@ -12,5 +12,16 @@ COPY ./startup.sh /root/
  && cd /usr/bin/v2ray \
  && chmod u+x v2ray \
  && cd /root/ \
- && chmod u+x startup.sh 
+ && chmod u+x startup.sh \
+ && echo '----' \
+ && echo '----' \
+ && echo '----' \
+ && echo '----' \
+ && echo $PORT \
+ && sed -i 's/PORT/$PORT' /etc/nginx/nginx.conf \
+ && echo '----' \
+ && echo '----' \
+ && echo '----' \
+ && echo '----' 
+ 
  ENTRYPOINT [ "/root/startup.sh" ]
